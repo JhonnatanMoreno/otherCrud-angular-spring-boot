@@ -1,0 +1,18 @@
+<div class="contenedorEstudiantes" *ngFor="let item of estudiante">
+  <div class="card">
+    <div class="card-header">
+      {{item.name}}
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Descripcion</h5>
+      <p class="card-text">
+        {{item.description}}
+      </p>
+      <button [routerLink]="['/form/actualizar', item.id]" class="btn btn-primary mr-2">
+        Editar
+      </button>
+      <button class="btn btn-danger" (click)="deleteEstudiante(item.id)">Eliminar</button>
+    </div>
+  </div>
+
+</div>

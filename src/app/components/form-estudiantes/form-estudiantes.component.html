@@ -1,0 +1,13 @@
+<form>
+  <div class="form-group">
+    <label for="estudianteNombre">Nombre del Estudiante</label>
+    <input type="text" class="form-control" [(ngModel)]="estudiante.name" name="Nombre" placeholder="digitar el nombre del estudiante">
+  </div>
+  <div class="form-group">
+    <label for="descripcionEstudiante">Descripcion del Estudiante</label>
+    <input type="text" [(ngModel)]="estudiante.description" class="form-control" name="descripcion" placeholder="digitar una descripcion del estudiante">
+  </div>
+  <button class="btn btn-primary" (click)="guardarOActualizar()">
+    {{estudiante.id === '' ? 'Guardar' : 'Editar'}}
+  </button>
+</form>
